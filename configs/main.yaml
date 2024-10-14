@@ -1,0 +1,31 @@
+defaults:
+  - model: 124M
+  - loader: pile_natural
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+  - _self_
+
+rundir: null
+learning_rate: 1e-3
+batch_size: 2048  # GLOBAL across all devices (not per device)
+warmup_steps: 5000
+min_lr: 1e-5
+lr_decay_steps: 60000
+max_steps: 60000
+beta2: 0.95
+weight_decay: 1e-4
+eval_interval: 1000
+param_dtype: float32
+compute_dtype: bfloat16
+g_accum_iters: 1
+shard_model: false
+block_size: 1024
+
+eval_harness: false
+multihost: false
+debug: false
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

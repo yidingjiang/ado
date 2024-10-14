@@ -1,0 +1,8 @@
+defaults:
+  - tasks_sampler_cfg: pile_tasks
+_target_: src.dataloader.adaptive_loader.AdaptiveLoader
+_recursive_: false
+ignore_steps: 1000
+start_step: 1000
+policy_type: ado
+data_dir: null

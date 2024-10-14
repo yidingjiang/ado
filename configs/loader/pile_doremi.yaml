@@ -1,0 +1,4 @@
+_target_: src.dataloader.pile_loader.ThePileBalanced
+_recursive_: false
+data_dir: null
+balancing_strategy: doremi

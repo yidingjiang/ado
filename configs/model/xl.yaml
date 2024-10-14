@@ -1,0 +1,6 @@
+vocab_size: 50304
+n_layer: 24
+n_head: 16
+n_embd: 2048
+dropout: 0.0
+mup: false

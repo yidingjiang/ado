@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - override /model: xl
+  - override /loader: pile_ado
+batch_size: 2048
+g_accum_iters: 1
+multihost: true
+shard_model: true
+lr_decay_steps: 60000
+max_steps: 60000
+warmup_steps: 500
+
+loader:
+  data_dir: null  # TODO: automate manual configuration
+  start_step: 500
