@@ -102,7 +102,7 @@ class AdoSelector:
         loss_diff = curr_loss_K - irred_loss_K
 
         weighted_slope_K = slope_K
-        weighted_slope_K = weighted_slope_K * self.empirical_dist * (self.p_history * (1-self.p_history))**0.5
+        weighted_slope_K = weighted_slope_K * self.empirical_dist * self.p_history ** 0.5
 
         dist_K_instant = weighted_slope_K
 
